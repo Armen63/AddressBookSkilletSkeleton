@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
 
+import static java.lang.System.exit;
 import static java.lang.System.getProperty;
 
 /**
@@ -21,7 +22,8 @@ import static java.lang.System.getProperty;
     public class Controller {
     Statics variable = new Statics();
     UserRepository userRepo = new UserRepositoryImpl();
-    static List<User> userList = new ArrayList<>();
+    List<User> userList = new ArrayList<>();
+    static User signedInUser;
 
 
     public void executor() {
@@ -70,65 +72,14 @@ import static java.lang.System.getProperty;
     }*/
 
     public void signUp() {
-        File file = new File("User.txt");
-        Scanner input = new Scanner(System.in);
-        String username,
-                password,
-                comman;
-        System.out.println(variable.writeUsername);
-        username = input.nextLine();
-        System.out.println(variable.writePassword);
-        password = input.nextLine();
-        User user = new User(username,password);
-        userRepo.addUser(user);
-
-        System.out.println(variable.successfullyCreate);
-        comman = input.nextLine();
-        if(comman.equals(variable.SignIn))
-            signIn();
-        else if(comman.equals(variable.SignUp))
-            signUp();
-        else
-            executor();
     }
 
     public void signIn(){
-        boolean result = false;
-        int count = 0;
-        Scanner input = new Scanner(System.in);
-        String username,
-                password;
-        System.out.println(variable.writeUsername);
-        username = input.nextLine();
-
-        System.out.println(variable.writePassword);
-        password = input.nextLine();
-
-        User user = new User(username, password);
-        for(User otherUser:userList){
-            result = true;
-            if(otherUser.equals(user)){
-                ///////////////////////////////
-               // urishUser = otherUser;
-                result = true;
-                break;
-            }
-        }
-        if(result){
-            System.out.println(">>You are successfully logged in\n" +
-                    ">>Now you can write down one of this commands 'Add Tel. Numb' or 'Show Tel. Numbers'");
-        }
-        else if(count < 3){
-            System.out.println("Your username or password is incorrect");
-            ++count;
-            signIn(); //rec
-        }
-        else
             return;
     }
 
     public void signOut() {
-
+        exit(404);
     }
 
     public void addTelNumber() {

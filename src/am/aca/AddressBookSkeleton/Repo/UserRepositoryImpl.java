@@ -1,13 +1,12 @@
 package am.aca.AddressBookSkeleton.Repo;
 
-import am.aca.AddressBookSkeleton.Comman.Exceptions.CheckedException;
-import am.aca.AddressBookSkeleton.Comman.Exceptions.UnCheckedException;
 import am.aca.AddressBookSkeleton.Comman.model.Address;
 import am.aca.AddressBookSkeleton.Comman.model.User;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Set;
 
 /**
  * Created by Armen on 9/3/2016.
@@ -40,6 +39,11 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User editUser(User user) throws UnCheckedException {
+        return null;
+    }
+
+    @Override
+    public Set<User> getUserList(String user) {
         return null;
     }
 }

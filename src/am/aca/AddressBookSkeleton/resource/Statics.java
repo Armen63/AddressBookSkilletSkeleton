@@ -7,12 +7,11 @@ public class Statics {
     public String SignIn = "Sign In";
     public String SignUp = "Sign Up";
     public String SignOut = "Sign Out";
-    public String writeSignUporSignIn = ">>Please write down one of this commands 'Sign Up' or 'Sign In':";
+    public String writeSignUporSignIn = ">>Please write down one of this commands 'Sign Up' or 'Sign In':\n";
     public String writeUsername = ">>Please provide your username:";
     public String writePassword = ">>Please provide your password:";
     public String successfullyCreate = ">>You have successfully created user. Please write down one of this commands 'Sign Up' or 'Sign In'";
-    public String successfullyLoged = "You are successfully logged in";
-    public String addNumberOrShowNumber = ">>Now you can write down one of this commands 'Add Tel. Number' or 'Show Tel. Numbers";
+    public String successfullyLoggedaddNumberOrShowNumber = ">>You are successfully logged in\n>>Now you can write down one of this commands 'Add Tel. Number' or 'Show Tel. Numbers";
     public String writeAddNumber  = ">>Please provide your telephone number";
     public String errorUsernameOrPassword = ">>Your username or password is incorrect please try again";
     public String successfullyAddedOrShowed = ">>You have successfully added your number\n>> If you want to add one more please write 'Add Tel. Number'. If you want to see your numbers list please write 'Show Tel. Numbers'\n";
